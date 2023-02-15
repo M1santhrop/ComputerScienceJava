@@ -1,20 +1,16 @@
-package part1;
+package chapter1;
 
 import java.util.stream.IntStream;
 
-public class MainClass1 {
+public class Fibonacci {
     private int last = 0;
     private int next = 1;
 
     public static void main(String[] args) {
-//        System.out.println(fib(0));
-//        System.out.println(fib(1));
-//        System.out.println(fib(2));
-//        System.out.println(fib(3));
-//        System.out.println(fib(4));
+        System.out.println(fib(4));
 
-        MainClass1 mainClass = new MainClass1();
-        mainClass.fibWithStream().limit(41).forEachOrdered(System.out::println);
+        Fibonacci fibonacci = new Fibonacci();
+        fibonacci.fibWithStream().limit(41).forEachOrdered(System.out::println);
     }
 
     private static int fib(int n) {
